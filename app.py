@@ -221,7 +221,7 @@ Helpful Answer:"""
 # --- Streamlit Application Layout ---
 
 st.set_page_config(page_title="Drug RAG Assistant", layout="wide")
-st.title("💊 Prototype Drug RAG Assistant (No Metadata)")
+st.title("💊 Prototype Drug RAG Assistant (Metadata with names and dose)")
 st.markdown("Enter a medical query to retrieve relevant drug information and generate an answer.")
 
 # Initialize RAG components with error handling

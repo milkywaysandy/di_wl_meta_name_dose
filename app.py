@@ -268,7 +268,9 @@ if st.button("Generate Answer"):
                 with st.expander("📄 Source Documents (Context Used)"):
                     if documents:
                         for i, doc in enumerate(documents):
-                            st.markdown(f"**Document {i+1}** (Source: `{doc.metadata.get('source_file', 'N/A')}`)")
+                            #print(doc.metadata['chinese_name'])***************
+                            st.markdown(f"**Document {i+1}** (Source: `{doc.metadata.get('chinese_name', 'N/A')}`,`{doc.metadata.get('source_file', 'N/A')}`)")
+                            #st.markdown(f"**Document {i+1}** (Source: `{doc.metadata.get('source_file', 'N/A')}`)") ####original
                             st.code(doc.page_content[:500] + ".. .", language='text')
                     else:
                         st.write("No source documents available.")
